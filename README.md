@@ -16,13 +16,15 @@ board 모듈 스킨 파일에서
 
 댓글 작성시 다시 불러올 부분을 분리합니다.
 
-분리한 걸 comment.html로 저장합니다.
+분리 후 comment.html로 저장합니다.
 
 그리고 분리한 파일은 맨처음 불러올 때도 포함될 수 있도록 include 합니다.
 
 ```html
 <include target="comment.html" />
 ```
+
+default 스킨에서는 _read.html, _comment.html 파일을 참고하시면 됩니다.
 
 ### board.view.php 수정
 board 뷰에 댓글 부분을 처리해서 보여주는
