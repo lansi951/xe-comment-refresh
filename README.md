@@ -22,9 +22,9 @@ board 모듈 스킨 파일에서
 분리한 걸 comment.html로 저장합니다.
 
 그리고 분리한 파일은 맨처음 불러올 때도 포함될 수 있도록 include 합니다.
-
+```html
 <include target="comment.html" />
-
+```
 board.view.php 수정
 -------------------
 board 뷰에 댓글 부분을 처리해서 보여주는
