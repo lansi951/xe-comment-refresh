@@ -4,7 +4,7 @@ function loadCommentPage(document_srl, cpage) {
 			document_srl: document_srl, 
 			cpage: cpage
 	};
-	var url = './?mid='+current_mid+'&act=dispBoardComment';
+	var url = current_url.setQuery('mid', current_mid).setQuery('act', 'dispBoardComment');
 	// ajax로 댓글 부분만 새로고침
 	jQuery('.boardComment').load(url+' .feedbackList', params, function(responseText, textStatus, req) {       
 		// 로딩 완료 후 처리
