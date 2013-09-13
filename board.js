@@ -6,10 +6,12 @@ function completeInsertComment(ret_obj) {
     var document_srl = ret_obj['document_srl'];
     var comment_srl = ret_obj['comment_srl'];
 
-    //var url = current_url.setQuery('mid',mid).setQuery('document_srl',document_srl).setQuery('act','');
-    //if(comment_srl) url = url.setQuery('rnd',comment_srl)+"#comment_"+comment_srl;
-    //alert(message);
-    //location.href = url;
-
-    loadCommentPage(document_srl, 1);
+	if (location.href.match(/dispBoardReplyComment/g) || location.href.match(/dispBoardModifyComment/g)) {
+		var url = current_url.setQuery('mid',mid).setQuery('document_srl',document_srl).setQuery('act','');
+		if(comment_srl) url = url.setQuery('rnd',comment_srl)+"#comment_"+comment_srl;
+	    //alert(message);
+		location.href = url;
+	}
+	else
+	    loadCommentPage(document_srl, 1);
 }
